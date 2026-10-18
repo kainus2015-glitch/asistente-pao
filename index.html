@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asistente PAO · Demostración v2.0 sin conexión</title>
+<style>
+/* Tailwind CSS utility subset bundled offline; generated from utility classes used by this interface. */
+*,*::before,*::after{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}table{border-collapse:collapse}
+.bg-amber-100{background-color:#fef3c7}
+.bg-amber-50{background-color:#fffbeb}
+.bg-blue-100{background-color:#dbeafe}
+.bg-blue-50{background-color:#eff6ff}
+.bg-blue-600{background-color:#2563eb}
+.bg-blue-700{background-color:#1d4ed8}
+.bg-emerald-100{background-color:#d1fae5}
+.bg-red-100{background-color:#fee2e2}
+.bg-red-50{background-color:#fef2f2}
+.bg-red-500{background-color:#ef4444}
+.bg-slate-100{background-color:#f1f5f9}
+.bg-slate-50{background-color:#f8fafc}
+.bg-white{background-color:#fff}
+.border{border:1px solid #e2e8f0}
+.border-amber-100{border-color:#fef3c7}
+.border-amber-200{border-color:#fde68a}
+.border-l-4{border-left-width:4px;border-left-style:solid}
+.border-l-amber-400{border-left-color:#fbbf24}
+.border-r{border-right:1px solid #e2e8f0}
+.border-red-100{border-color:#fee2e2}
+.border-slate-200{border-color:#e2e8f0}
+.border-t{border-top:1px solid #e2e8f0}
+.flex{display:flex}
+.flex-1{flex:1 1 0%}
+.flex-col{flex-direction:column}
+.flex-wrap{flex-wrap:wrap}
+.font-bold{font-weight:700}
+.font-extrabold{font-weight:800}
+.font-semibold{font-weight:600}
+.gap-2{gap:8px}
+.gap-3{gap:12px}
+.gap-4{gap:16px}
+.gap-5{gap:20px}
+.gap-7{gap:28px}
+.grid{display:grid}
+.h-11{height:44px}
+.h-2{height:8px}
+.h-3{height:12px}
+.h-full{height:100%}
+.hidden{display:none}
+.items-center{align-items:center}
+.justify-between{justify-content:space-between}
+.justify-center{justify-content:center}
+.leading-5{line-height:20px}
+@media(min-width:1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1024px){.lg\:p-10{padding:40px}}
+.list-decimal{list-style-type:decimal}
+.max-w-xs{max-width:320px}
+.mb-2{margin-bottom:8px}
+.mb-3{margin-bottom:12px}
+.mb-4{margin-bottom:16px}
+.mb-5{margin-bottom:20px}
+.mb-8{margin-bottom:32px}
+@media(min-width:768px){.md\:col-span-3{grid-column:span 3 / span 3}}
+@media(min-width:768px){.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:768px){.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:768px){.md\:h-screen{height:100vh}}
+@media(min-width:768px){.md\:sticky{position:sticky}}
+@media(min-width:768px){.md\:top-0{top:0}}
+.min-h-screen{min-height:100vh}
+.min-w-0{min-width:0}
+.min-w-36{min-width:144px}
+.mt-1{margin-top:4px}
+.mt-2{margin-top:8px}
+.mt-3{margin-top:12px}
+.mt-5{margin-top:20px}
+.mt-9{margin-top:36px}
+.mt-auto{margin-top:auto}
+.overflow-hidden{overflow:hidden}
+.p-3{padding:12px}
+.p-4{padding:16px}
+.p-5{padding:20px}
+.p-6{padding:24px}
+.p-8{padding:32px}
+.pl-5{padding-left:20px}
+.pt-4{padding-top:16px}
+.pt-5{padding-top:20px}
+.px-4{padding-inline:16px}
+.py-2{padding-block:8px}
+.py-3{padding-block:12px}
+.rounded-2xl{border-radius:16px}
+.rounded-full{border-radius:999px}
+.rounded-xl{border-radius:12px}
+.shrink-0{flex-shrink:0}
+@media(min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.text-3xl{font-size:30px}
+.text-amber-800{color:#92400e}
+.text-amber-900{color:#78350f}
+.text-blue-700{color:#1d4ed8}
+.text-blue-800{color:#1e40af}
+.text-blue-900{color:#1e3a8a}
+.text-emerald-800{color:#065f46}
+.text-left{text-align:left}
+.text-lg{font-size:18px}
+.text-red-700{color:#b91c1c}
+.text-red-800{color:#991b1b}
+.text-red-900{color:#7f1d1d}
+.text-slate-500{color:#64748b}
+.text-slate-600{color:#475569}
+.text-slate-700{color:#334155}
+.text-sm{font-size:14px}
+.text-white{color:#fff}
+.text-xl{font-size:20px}
+.text-xs{font-size:12px}
+.tracking-tight{letter-spacing:-.025em}
+.tracking-widest{letter-spacing:.1em}
+.uppercase{text-transform:uppercase}
+.w-11{width:44px}
+.w-full{width:100%}
+@media(min-width:1280px){.xl\:col-span-2{grid-column:span 2 / span 2}}
+@media(min-width:1280px){.xl\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.space-y-1>:not([hidden])~:not([hidden]){margin-top:4px}
+.space-y-2>:not([hidden])~:not([hidden]){margin-top:8px}
+.space-y-3>:not([hidden])~:not([hidden]){margin-top:12px}
+.space-y-5>:not([hidden])~:not([hidden]){margin-top:20px}
+.space-y-6>:not([hidden])~:not([hidden]){margin-top:24px}
+</style>
+<style>
+:root{color-scheme:light}body{font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:#f5f7fb;color:#17243b}.navbtn.active{background:#e9f1ff;color:#1d4ed8;font-weight:700}.navbtn{transition:.15s}.navbtn:hover{background:#f0f4fa}.pill{border-radius:999px;padding:3px 9px;font-size:11px;font-weight:700}.card{background:white;border:1px solid #e3e9f2;border-radius:18px;box-shadow:0 4px 22px #17243b08}.field{border:1px solid #d5deea;border-radius:10px;padding:10px 12px;width:100%;background:white}.field:focus{outline:2px solid #93c5fd}.btn{border-radius:10px;padding:10px 14px;font-weight:650}.btnprimary{background:#1d4ed8;color:white}.btnprimary:hover{background:#1e40af}.btnlight{background:#eef3fa;color:#253a56}.btnlight:hover{background:#e0e9f6}.tablewrap{overflow:auto}th{text-align:left;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#64748b;font-weight:750;background:#f8fafc}td,th{padding:13px 14px;white-space:nowrap;border-bottom:1px solid #edf1f6}td{font-size:13px}.muted{color:#64748b}.label{font-size:12px;font-weight:700;color:#42536d;display:block;margin-bottom:5px}.sidebar{width:248px}.view{display:none}.view.active{display:block}@media(max-width:800px){.sidebar{width:100%;position:static!important}.shell{flex-direction:column}.mainpad{padding:16px!important}.navrow{display:flex;overflow:auto}.navbtn{min-width:max-content}}
+</style>
+</head>
+<body>
+<div class="shell flex min-h-screen">
+<aside class="sidebar shrink-0 bg-white border-r border-slate-200 p-5 md:sticky md:top-0 md:h-screen flex flex-col gap-7">
+<div class="flex items-center gap-3"><div class="w-11 h-11 bg-blue-700 text-white rounded-2xl flex items-center justify-center font-bold text-xl">+</div><div><div class="font-extrabold tracking-tight text-lg">Asistente PAO</div><div class="text-xs text-slate-500">Unidad sanitaria · v2.0 offline</div></div></div>
+<div class="rounded-xl bg-amber-50 border border-amber-200 p-3 text-xs text-amber-900"><b>Prototipo de demostración</b><br>Solo datos ficticios. No conectado al hospital ni a pacientes reales.</div>
+<nav class="navrow space-y-1" id="nav">
+<button data-view="inicio" class="navbtn active w-full text-left rounded-xl px-4 py-3 text-sm">▦ &nbsp; Panel general</button>
+<button data-view="solicitudes" class="navbtn w-full text-left rounded-xl px-4 py-3 text-sm">▤ &nbsp; Solicitudes</button>
+<button data-view="agenda" class="navbtn w-full text-left rounded-xl px-4 py-3 text-sm">▦ &nbsp; Agenda y capacidad</button>
+<button data-view="incidencias" class="navbtn w-full text-left rounded-xl px-4 py-3 text-sm">⚑ &nbsp; Incidencias</button>
+<button data-view="procedimiento" class="navbtn w-full text-left rounded-xl px-4 py-3 text-sm">◎ &nbsp; Procedimiento</button>
+</nav>
+<div class="mt-auto text-xs text-slate-500 leading-5">La prescripción y validación son actos médicos. La redistribución excepcional corresponde al jefe de servicio.</div>
+</aside>
+<main class="flex-1 min-w-0 mainpad p-8 lg:p-10">
+<header class="flex flex-wrap items-center justify-between gap-3 mb-8"><div><p class="text-xs uppercase font-bold tracking-widest text-blue-700">Gestión administrativa · demostración</p><h1 id="pageTitle" class="text-3xl font-extrabold mt-1">Panel general</h1><p class="muted text-sm mt-1">Seguimiento y organización de PAO sin decisiones clínicas automatizadas.</p></div><div class="flex flex-wrap gap-2"><button id="resetBtn" class="btn btnlight text-sm">Restaurar ejemplo</button><button id="saveVersion" class="btn btnprimary text-sm">↓ Guardar copia HTML (versión independiente)</button></div></header>
+<div id="notice" role="status" aria-live="polite" class="hidden mb-5 p-3 rounded-xl bg-blue-50 text-blue-900 text-sm"></div>
+<section id="inicio" class="view active space-y-6">
+<div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4" id="metrics"></div>
+<div class="grid xl:grid-cols-3 gap-5"><div class="card p-6 xl:col-span-2"><div class="flex justify-between items-center gap-3 mb-4"><h2 class="font-bold text-lg">Pendientes y próximos pasos</h2><button data-go="solicitudes" class="text-blue-700 text-sm font-semibold">Ver solicitudes →</button></div><div class="tablewrap"><table class="w-full"><thead><tr><th>Código ficticio</th><th>Médico</th><th>Trámite</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="homeRows"></tbody></table></div></div><div class="card p-6"><h2 class="font-bold text-lg mb-3">Capacidad semanal estimada</h2><div class="flex justify-between text-sm mb-2"><span>Trabajo estimado</span><b>200 min</b></div><div class="h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-blue-600 rounded-full" style="width:83.33%"></div></div><div class="flex justify-between text-xs muted mt-2"><span>83,3 % de ocupación global</span><span>240 min disponibles</span></div><p class="text-sm muted mt-5">10 solicitudes iniciales × 15 min + 10 validaciones × 5 min. Margen teórico global: <b>40 minutos</b>. La carga real por médico puede ser desigual.</p></div></div>
+<div class="card p-5 border-l-4 border-l-amber-400"><h3 class="font-bold">Atención a los plazos</h3><p class="text-sm muted mt-1">Los PAO vencen seis meses después de la autorización de la región sanitaria, según el circuito facilitado. Los ejemplos muestran fechas simuladas. Confirmar el cómputo exacto de la fecha límite con el centro antes de utilizarlo operativamente.</p></div>
+</section>
+<section id="solicitudes" class="view space-y-5"><div class="card p-5"><div class="flex flex-wrap justify-between gap-3 items-center"><div><h2 class="font-bold text-lg">Solicitudes ficticias</h2><p class="text-sm muted">Añade y modifica registros de prueba. Los cambios de la demostración solo duran mientras esta página permanezca abierta. No se guardan datos de pacientes.</p></div><button id="addToggle" class="btn btnprimary text-sm">+ Nueva solicitud ficticia</button></div><form id="addForm" class="hidden mt-5 grid md:grid-cols-3 gap-4 border-t pt-5"><div><label class="label" for="code">Código de prueba</label><input id="code" class="field" required maxlength="30" pattern="DEMO-[A-Za-z0-9-]+" placeholder="DEMO-005"></div><div><label class="label" for="doctor">Médico</label><select id="doctor" class="field"><option>M1</option><option>M2</option><option>M3</option><option>M4</option></select></div><div><label class="label" for="type">Tipo de trámite</label><select id="type" class="field"><option>Inicial</option><option>Validación</option></select></div><div><label class="label" for="requested">Fecha de solicitud</label><input id="requested" class="field" type="date" required></div><div><label class="label" for="authorized">Fecha de autorización (solo validación)</label><input id="authorized" class="field" type="date"></div><div><label class="label" for="state">Estado</label><select id="state" class="field"><option>Pendiente de cita</option><option>Citado</option><option>En trámite</option><option>Incidencia</option><option>Finalizado</option></select></div><div class="md:col-span-3 flex gap-2"><button type="submit" class="btn btnprimary">Añadir ejemplo</button><button type="button" id="cancelAdd" class="btn btnlight">Cancelar</button></div></form></div>
+<div class="card p-5"><div class="flex flex-wrap gap-3 mb-4"><input id="search" class="field max-w-xs" placeholder="Buscar código DEMO o médico"><select id="filter" class="field max-w-xs"><option value="">Todos los estados</option><option>Pendiente de cita</option><option>Citado</option><option>En trámite</option><option>Incidencia</option><option>Finalizado</option></select></div><div class="tablewrap"><table class="w-full"><thead><tr><th>Código</th><th>Médico</th><th>Trámite</th><th>Solicitud</th><th>Caducidad simulada</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="requestRows"></tbody></table></div></div></section>
+<section id="agenda" class="view space-y-5"><div class="card p-6"><h2 class="font-bold text-lg">Agenda de los cuatro médicos</h2><p class="text-sm muted mt-1">Cada médico tiene una hora semanal, en un día fijo distinto. Los días reales deben aprobarse en el servicio.</p><div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4 mt-5" id="doctorCards"></div></div><div class="card p-6"><h3 class="font-bold mb-3">Reglas de programación</h3><ol class="list-decimal pl-5 space-y-2 text-sm text-slate-700"><li>Cada médico atiende sus propios PAO.</li><li>Secretaría consulta la agenda corporativa y avisa al paciente de la cita.</li><li>Si la hora está completa, se pasa a la semana siguiente cuando el plazo lo permite.</li><li>Si existe riesgo de caducidad, se comunica al médico; si no se resuelve, al jefe de servicio.</li><li>Solo el jefe de servicio decide la redistribución excepcional.</li></ol></div></section>
+<section id="incidencias" class="view space-y-5"><div class="card p-6"><h2 class="font-bold text-lg">Guía de incidencias</h2><p class="text-sm muted mt-2">Las siguientes acciones son propuestas administrativas para validación del equipo. No son decisiones clínicas automáticas.</p><div class="grid md:grid-cols-2 gap-4 mt-5"><div class="bg-red-50 border border-red-100 rounded-xl p-4"><h3 class="font-bold text-red-900">Dispositivo roto con pérdida de independencia en AVD</h3><p class="text-sm mt-2">Supuesto urgente descrito por la unidad. Secretaría lo comunica al jefe de servicio, que determina la actuación. Si hay duda sobre la situación, solicitar valoración al profesional responsable.</p></div><div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h3 class="font-bold text-amber-900">Caducidad próxima o sin cita disponible</h3><p class="text-sm mt-2">Avisar al médico prescriptor; si no puede resolverse, comunicar al jefe de servicio. El umbral de aviso anticipado está pendiente de aprobación.</p></div><div class="bg-slate-50 border rounded-xl p-4"><h3 class="font-bold">Agenda completa o ausencia</h3><p class="text-sm mt-2">Reprogramar con el mismo médico si puede esperar. Si no puede esperar, elevar al jefe de servicio.</p></div><div class="bg-slate-50 border rounded-xl p-4"><h3 class="font-bold">Acumulación de pendientes</h3><p class="text-sm mt-2">Secretaría revisa los pendientes, avisa al médico responsable y, si persiste la acumulación, lo comunica al jefe de servicio.</p></div></div></div><div class="card p-6"><h3 class="font-bold">Incidencias en los datos ficticios</h3><div id="incidentRows" class="text-sm mt-3"></div></div></section>
+<section id="procedimiento" class="view space-y-5"><div class="grid lg:grid-cols-2 gap-5"><div class="card p-6"><h2 class="font-bold text-lg mb-3">Circuito inicial</h2><ol class="list-decimal pl-5 space-y-3 text-sm"><li>El paciente solicita el PAO.</li><li>Secretaría registra, consulta agenda y avisa al paciente.</li><li>El médico valora, prescribe y elabora informe.</li><li>Secretaría lleva los originales en papel a Atención Ciudadana.</li><li>Atención Ciudadana los remite a la región sanitaria.</li><li>La región sanitaria autoriza y devuelve la documentación al paciente o a Atención Ciudadana para su entrega.</li></ol></div><div class="card p-6"><h2 class="font-bold text-lg mb-3">Circuito de validación</h2><ol class="list-decimal pl-5 space-y-3 text-sm"><li>El paciente adquiere el aparato en la ortopedia.</li><li>Solicita cita con secretaría y aporta la fecha de autorización.</li><li>Secretaría consulta agenda, caducidad y avisa al paciente.</li><li>El paciente lleva aparato y originales.</li><li>El médico prescriptor revisa la idoneidad y valida cuando procede.</li><li>Secretaría registra el cierre administrativo confirmado.</li></ol></div></div><div class="card p-6"><h2 class="font-bold text-lg mb-3">Responsabilidades</h2><div class="grid md:grid-cols-2 gap-4 text-sm"><p><b>Secretaría:</b> recepción, agenda, comunicación de citas, registro corporativo, seguimiento de pendientes, aviso de acumulación y traslado de originales.</p><p><b>Médicos:</b> valoración, prescripción, informe, revisión de idoneidad y validación.</p><p><b>Jefe de servicio:</b> gestión de excepciones, redistribución y decisiones ante acumulaciones persistentes.</p><p><b>EPA:</b> difusión e información a pacientes sobre el circuito, junto con secretaría.</p></div></div><div class="card p-6"><h2 class="font-bold text-lg mb-2">Antes de implantar</h2><p class="text-sm muted">Aprobar horarios, criterios de escalada, método exacto de cómputo de caducidad, umbrales de alerta, acceso a sistemas y tratamiento de datos. La herramienta de registro será corporativa y con datos codificados; los originales seguirán en papel.</p></div></section>
+<footer class="mt-9 text-xs text-slate-500 border-t pt-4">Asistente PAO · Demostración v2.0 sin Internet con datos exclusivamente ficticios · Sin conexión a sistemas corporativos · No usar como historia clínica ni registro operativo.</footer>
+</main></div>
+<script>
+'use strict';
+// Demo only. No persistence, no network submission, no patient information.
+const initial=[{id:'DEMO-001',doctor:'M1',type:'Inicial',requested:'2026-10-12',authorized:'',state:'Pendiente de cita'},{id:'DEMO-002',doctor:'M2',type:'Validación',requested:'2026-10-13',authorized:'2026-06-10',state:'Citado'},{id:'DEMO-003',doctor:'M3',type:'Validación',requested:'2026-10-14',authorized:'2026-04-26',state:'Incidencia'},{id:'DEMO-004',doctor:'M4',type:'Inicial',requested:'2026-10-15',authorized:'',state:'En trámite'}];
+let records=initial.map(x=>({...x}));
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function addMonths(date,months){if(!date)return null;const [y,m,d]=date.split('-').map(Number);if(!y||!m||!d)return null;const t=new Date(Date.UTC(y,m-1+months,1));const max=new Date(Date.UTC(t.getUTCFullYear(),t.getUTCMonth()+1,0)).getUTCDate();t.setUTCDate(Math.min(d,max));return t.toISOString().slice(0,10)}
+function dateText(d){if(!d)return '—';const [y,m,day]=d.split('-');return `${day}/${m}/${y}`}
+function statusPill(s){const colors={'Pendiente de cita':'bg-amber-100 text-amber-800','Citado':'bg-blue-100 text-blue-800','En trámite':'bg-slate-100 text-slate-700','Incidencia':'bg-red-100 text-red-800','Finalizado':'bg-emerald-100 text-emerald-800'};return `<span class="pill ${colors[s]||'bg-slate-100'}">${esc(s)}</span>`}
+function notify(msg){$('notice').textContent=msg;$('notice').classList.remove('hidden')}
+function render(){const pending=records.filter(r=>r.state!=='Finalizado');const validations=records.filter(r=>r.type==='Validación'&&r.state!=='Finalizado');const issues=records.filter(r=>r.state==='Incidencia');const tiles=[['Solicitudes abiertas',pending.length,'Trámites ficticios activos'],['Pendientes de cita',pending.filter(r=>r.state==='Pendiente de cita').length,'Sin cita programada'],['Validaciones abiertas',validations.length,'Control de plazo'],['Incidencias',issues.length,'Requieren revisión']];$('metrics').innerHTML=tiles.map(([name,num,sub])=>`<div class="card p-5"><div class="text-sm muted">${name}</div><div class="text-3xl font-extrabold mt-3">${num}</div><div class="text-xs muted mt-2">${sub}</div></div>`).join('');$('homeRows').innerHTML=pending.slice(0,6).map(r=>`<tr><td class="font-bold">${esc(r.id)}</td><td>${esc(r.doctor)}</td><td>${esc(r.type)}</td><td>${statusPill(r.state)}</td><td class="text-slate-600">${r.state==='Incidencia'?'Revisar incidencia':r.state==='Pendiente de cita'?'Programar cita':'Seguimiento'}</td></tr>`).join('')||'<tr><td colspan="5">Sin pendientes</td></tr>';
+const q=$('search').value.toLowerCase(),f=$('filter').value;const visible=records.filter(r=>(!f||r.state===f)&&(!q||r.id.toLowerCase().includes(q)||r.doctor.toLowerCase().includes(q)));$('requestRows').innerHTML=visible.map(r=>`<tr><td class="font-bold">${esc(r.id)}</td><td>${esc(r.doctor)}</td><td>${esc(r.type)}</td><td>${dateText(r.requested)}</td><td>${r.type==='Validación'?dateText(addMonths(r.authorized,6)):'—'}</td><td>${statusPill(r.state)}</td><td><select aria-label="Estado de ${esc(r.id)}" class="field text-xs min-w-36 state-select" data-id="${esc(r.id)}">${['Pendiente de cita','Citado','En trámite','Incidencia','Finalizado'].map(s=>`<option ${s===r.state?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('')||'<tr><td colspan="7">No hay registros para este filtro.</td></tr>';
+$('doctorCards').innerHTML=['M1','M2','M3','M4'].map(d=>{const mine=pending.filter(r=>r.doctor===d);const mins=mine.reduce((a,r)=>a+(r.type==='Inicial'?15:5),0);return `<div class="border rounded-xl p-4"><div class="font-bold text-lg">${d}</div><div class="text-xs muted mb-3">Día fijo por confirmar</div><div class="text-sm">${mine.length} solicitudes abiertas</div><div class="h-2 bg-slate-100 rounded-full mt-3 overflow-hidden"><div class="h-full ${mins>60?'bg-red-500':'bg-blue-600'}" style="width:${Math.min(100,mins/60*100)}%"></div></div><div class="text-xs muted mt-2">${mins} / 60 min (simulación)</div>${mins>60?'<div class="text-xs text-red-700 mt-2 font-bold">Carga estimada superior a la hora</div>':''}</div>`}).join('');$('incidentRows').innerHTML=issues.length?issues.map(r=>`<div class="border-b py-2"><b>${esc(r.id)}</b> · ${esc(r.doctor)} · Revisar con secretaría y escalar según procedimiento aprobado.</div>`).join(''):'No hay incidencias en los datos ficticios.';}
+function navigate(view){document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el.id===view));document.querySelectorAll('.navbtn').forEach(el=>el.classList.toggle('active',el.dataset.view===view));$('pageTitle').textContent={inicio:'Panel general',solicitudes:'Solicitudes',agenda:'Agenda y capacidad',incidencias:'Incidencias',procedimiento:'Procedimiento'}[view];window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-view]').forEach(el=>el.addEventListener('click',()=>navigate(el.dataset.view)));document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',()=>navigate(el.dataset.go)));
+$('addToggle').addEventListener('click',()=>{$('addForm').classList.toggle('hidden');$('code').focus()});$('cancelAdd').addEventListener('click',()=>{$('addForm').classList.add('hidden')});
+$('addForm').addEventListener('submit',e=>{e.preventDefault();const id=$('code').value.trim().toUpperCase(),type=$('type').value,auth=$('authorized').value;if(!/^DEMO-[A-Z0-9-]+$/.test(id)){notify('Usa únicamente un código ficticio que empiece por DEMO-.');return}if(records.some(r=>r.id===id)){notify('El código ficticio ya existe.');return}if(type==='Validación'&&!auth){notify('Introduce una fecha de autorización ficticia para la validación.');return}records.push({id,doctor:$('doctor').value,type,requested:$('requested').value,authorized:type==='Validación'?auth:'',state:$('state').value});$('addForm').reset();$('addForm').classList.add('hidden');notify('Solicitud ficticia añadida solo a esta sesión. No se ha registrado en ningún sistema.');render()});
+$('requestRows').addEventListener('change',e=>{if(!e.target.matches('.state-select'))return;const r=records.find(x=>x.id===e.target.dataset.id);if(r){r.state=e.target.value;notify('Estado modificado únicamente en la demostración; no se ha actualizado ningún sistema corporativo.');render()}});
+$('search').addEventListener('input',render);$('filter').addEventListener('change',render);
+$('resetBtn').addEventListener('click',()=>{records=initial.map(x=>({...x}));$('search').value='';$('filter').value='';render();notify('Ejemplos ficticios restaurados.')});
+$('saveVersion').addEventListener('click',()=>{const stamp=new Date().toISOString().replace(/[:.]/g,'-');const source='<!DOCTYPE html>\n'+document.documentElement.outerHTML;const blob=new Blob([source],{type:'text/html;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`asistente_pao_version_${stamp}.html`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Se ha solicitado guardar una copia HTML completa con nombre de versión único. Conserva cada archivo por separado. Los registros ficticios de la sesión no se exportan.')});
+render();
+</script>
+</body></html>
